@@ -82,19 +82,12 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Active page highlight WITHOUT .html
-let currentPage = window.location.pathname.split('/').pop();
-
-// Empty path = index
-if (!currentPage || currentPage === "/") {
-    currentPage = "index";
-} else {
-    currentPage = currentPage.replace(".html", "");
-}
+let currentPage = window.location.pathname.split('/').filter(Boolean).pop() || 'index';
 
 document.querySelectorAll('.nav-links a').forEach(link => {
-    const linkPage = link.getAttribute('href').replace(".html", "");
+    const linkPath = link.getAttribute('href').split('/').filter(Boolean).pop() || 'index';
 
-    if (linkPage === currentPage) {
+    if (linkPath === currentPage) {
         link.classList.add('active');
     }
 });
