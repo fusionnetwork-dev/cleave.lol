@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>status - cleave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">cleave</div>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="commands.html">commands</a></li>
+            <li><a href="status.html" class="active">status</a></li>
+            <li><a href="docs.html">docs</a></li>
+            <li><a href="faq.html">faq</a></li>
+            <li><a href="https://discord.com/oauth2/authorize?client_id=1441681059002712155&permissions=8&integration_type=0&scope=bot%20applications.commands" class="invite-btn">invite</a></li>
+        </ul>
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>status</h1>
+            <p>real-time bot statistics and updates</p>
+        </div>
+    </div>
+
+    <div class="status-page">
+        <div class="container" style="max-width: 900px;">
+            <div class="status-card">
+                <div class="status-header">
+                    <h2>bot status</h2>
+                    <div class="status-indicator">
+                        <span class="status-dot online"></span>
+                        <span>operational</span>
+                    </div>
+                </div>
+                <div class="status-grid">
+                    <div class="status-stat">
+                        <div class="stat-icon">🌐</div>
+                        <div class="stat-value">Many</div>
+                        <div class="stat-label">servers</div>
+                    </div>
+                    <div class="status-stat">
+                        <div class="stat-icon">👥</div>
+                        <div class="stat-value">Many</div>
+                        <div class="stat-label">users</div>
+                    </div>
+                    <div class="status-stat">
+                        <div class="stat-icon">📊</div>
+                        <div class="stat-value">90.2%</div>
+                        <div class="stat-label">uptime</div>
+                    </div>
+                    <div class="status-stat">
+                        <div class="stat-icon">⚡</div>
+                        <div class="stat-value">24ms</div>
+                        <div class="stat-label">latency</div>
+                    </div>
+                    <div class="status-stat">
+                        <div class="stat-icon">💬</div>
+                        <div class="stat-value">300*</div>
+                        <div class="stat-label">commands ran</div>
+                    </div>
+                    <div class="status-stat">
+                        <div class="stat-icon">📈</div>
+                        <div class="stat-value">+6%</div>
+                        <div class="stat-label">growth</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-card">
+                <h2>recent updates</h2>
+                <div class="updates-list">
+                    <div class="update-item">
+                        <div class="update-date">nov 20, 2025</div>
+                        <div class="update-title">v2.4.0 - economy update</div>
+                        <div class="update-desc">
+                            • full economy system with work, crime, rob commands<br>
+                            • leaderboard feature<br>
+                            • bank system for storing money<br>
+                            • improved gambling mechanics
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">nov 15, 2025</div>
+                        <div class="update-title">v2.3.5 - social features</div>
+                        <div class="update-desc">
+                            • added marriage system<br>
+                            • vouch/rep system improvements<br>
+                            • ship calculator<br>
+                            • bug fixes
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">nov 10, 2025</div>
+                        <div class="update-title">v2.3.0 - moderation overhaul</div>
+                        <div class="update-desc">
+                            • added hackban and massban<br>
+                            • improved logging system<br>
+                            • better permission checks<br>
+                            • nuke command added
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">nov 5, 2025</div>
+                        <div class="update-title">v2.2.0 - utilities & fun</div>
+                        <div class="update-desc">
+                            • starboard system<br>
+                            • counting channels<br>
+                            • reaction snipe<br>
+                            • meme command
+                        </div>
+                    </div>
+                    <div class="update-item">
+                        <div class="update-date">nov 1, 2025</div>
+                        <div class="update-title">v2.1.0 - performance</div>
+                        <div class="update-desc">
+                            • improved response times<br>
+                            • reduced memory usage<br>
+                            • optimized database queries<br>
+                            • stability improvements
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-card">
+                <h2>system health</h2>
+                <div class="health-grid">
+                    <div class="health-item">
+                        <div class="health-label">
+                            <span class="health-dot online"></span>
+                            api
+                        </div>
+                        <div class="health-status">operational</div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-label">
+                            <span class="health-dot online"></span>
+                            database
+                        </div>
+                        <div class="health-status">operational</div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-label">
+                            <span class="health-dot online"></span>
+                            discord gateway
+                        </div>
+                        <div class="health-status">operational</div>
+                    </div>
+                    <div class="health-item">
+                        <div class="health-label">
+                            <span class="health-dot online"></span>
+                            commands
+                        </div>
+                        <div class="health-status">operational</div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="status-card">
+                <h2>whats next?</h2>
+                <div class="roadmap-list">
+                    <div class="roadmap-item">
+                        <div class="roadmap-status upcoming">soon</div>
+                        <div class="roadmap-title">leveling system</div>
+                        <div class="roadmap-desc">rank up by being active in the server</div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-status upcoming">soon</div>
+                        <div class="roadmap-title">custom commands</div>
+                        <div class="roadmap-desc">create your own custom commands</div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-status planned">soon</div>
+                        <div class="roadmap-title">music system</div>
+                        <div class="roadmap-desc">play music in voice channels</div>
+                    </div>
+                    <div class="roadmap-item">
+                        <div class="roadmap-status planned">soon</div>
+                        <div class="roadmap-title">ticket system</div>
+                        <div class="roadmap-desc">support ticket system for servers</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>cleave</h4>
+                    <p>the discord bot that goes crazy</p>
+                </div>
+                <div class="footer-col">
+                    <h4>links</h4>
+                    <a href="commands.html">commands</a>
+                    <a href="status.html">status</a>
+                    <a href="docs.html">docs</a>
+                    <a href="faq.html">faq</a>
+                </div>
+                <div class="footer-col">
+                    <h4>support</h4>
+                    <a href="#">discord server</a>
+                    <a href="#">twitter</a>
+                    <a href="#">github</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>cleave.lol © 2024 • not affiliated with discord</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <style>
+        .status-page {
+            padding: 50px 0 100px;
+        }
+
+        .status-card {
+            background: var(--bg-light);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 40px;
+            margin-bottom: 30px;
+        }
+
+        .status-card h2 {
+            font-size: 28px;
+            margin-bottom: 30px;
+        }
+
+        .status-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+
+        .status-indicator {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .status-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            animation: blink 2s infinite;
+        }
+
+        .status-dot.online {
+            background: #27c93f;
+        }
+
+        @keyframes blink {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.4; }
+        }
+
+        .status-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .status-stat {
+            text-align: center;
+            padding: 25px;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .stat-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+        }
+
+        .stat-value {
+            font-size: 32px;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 5px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: var(--text-dimmer);
+        }
+
+        .updates-list {
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+        }
+
+        .update-item {
+            padding: 20px;
+            background: var(--bg);
+            border-radius: 8px;
+            border-left: 3px solid var(--primary);
+        }
+
+        .update-date {
+            font-size: 12px;
+            color: var(--text-dimmer);
+            margin-bottom: 8px;
+        }
+
+        .update-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+
+        .update-desc {
+            color: var(--text-dim);
+            line-height: 1.8;
+        }
+
+        .health-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .health-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px;
+            background: var(--bg);
+            border-radius: 8px;
+        }
+
+        .health-label {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-weight: 600;
+        }
+
+        .health-dot {
+            width: 10px;
+            height: 10px;
+            border-radius: 50%;
+        }
+
+        .health-dot.online {
+            background: #27c93f;
+        }
+
+        .health-status {
+            color: #27c93f;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .roadmap-list {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .roadmap-item {
+            padding: 20px;
+            background: var(--bg);
+            border-radius: 8px;
+            border: 1px solid var(--border);
+        }
+
+        .roadmap-status {
+            display: inline-block;
+            padding: 4px 12px;
+            border-radius: 4px;
+            font-size: 11px;
+            font-weight: 600;
+            text-transform: uppercase;
+            margin-bottom: 10px;
+        }
+
+        .roadmap-status.upcoming {
+            background: rgba(255, 165, 0, 0.2);
+            color: #ffa500;
+        }
+
+        .roadmap-status.planned {
+            background: rgba(100, 100, 255, 0.2);
+            color: #6464ff;
+        }
+
+        .roadmap-title {
+            font-size: 18px;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .roadmap-desc {
+            color: var(--text-dim);
+        }
+
+        @media (max-width: 768px) {
+            .status-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .health-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</body>
+</html>
