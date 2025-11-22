@@ -10,11 +10,11 @@
     <nav class="nav">
         <div class="logo">cleave</div>
         <ul class="nav-links">
-    <li><a href="/" class="active">home</a></li>
-    <li><a href="/commands">commands</a></li>
-    <li><a href="/status">status</a></li>
-    <li><a href="/docs">docs</a></li>
-    <li><a href="/faq">faq</a></li>
+            <li><a href="/" class="active">home</a></li>
+            <li><a href="/commands">commands</a></li>
+            <li><a href="/status">status</a></li>
+            <li><a href="/docs">docs</a></li>
+            <li><a href="/faq">faq</a></li>
             <li><a href="https://discord.com/oauth2/authorize?client_id=1441681059002712155&permissions=8&integration_type=0&scope=bot%20applications.commands" class="invite-btn">invite</a></li>
         </ul>
         <div class="mobile-toggle">
@@ -27,7 +27,7 @@
     <div class="page-header">
         <div class="container">
             <h1>commands</h1>
-            <p>all commands cleave has to offer</p>
+            <p>all commands cleave has to offer - 160+ commands</p>
         </div>
     </div>
 
@@ -44,6 +44,8 @@
                 <button class="tab-btn" data-category="social">social</button>
                 <button class="tab-btn" data-category="economy">economy</button>
                 <button class="tab-btn" data-category="fun">fun</button>
+                <button class="tab-btn" data-category="music">music</button>
+                <button class="tab-btn" data-category="custom">custom</button>
                 <button class="tab-btn" data-category="config">config</button>
             </div>
 
@@ -88,11 +90,35 @@
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
+                                <span class="cmd-name">/untimeout</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">remove timeout from a member</p>
+                            <div class="cmd-usage">usage: /untimeout @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
                                 <span class="cmd-name">/warn</span>
                                 <span class="cmd-badge mod">mod</span>
                             </div>
                             <p class="cmd-desc">warn a member for breaking rules</p>
                             <div class="cmd-usage">usage: /warn @user [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/warns</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">view warnings for a user</p>
+                            <div class="cmd-usage">usage: /warns [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/clearwarns</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">clear all warnings from a user</p>
+                            <div class="cmd-usage">usage: /clearwarns @user</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
@@ -128,6 +154,46 @@
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
+                                <span class="cmd-name">/hide</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">hide a channel from @everyone</p>
+                            <div class="cmd-usage">usage: /hide [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/unhide</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">unhide a previously hidden channel</p>
+                            <div class="cmd-usage">usage: /unhide [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/slowmode</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">set slowmode delay in a channel</p>
+                            <div class="cmd-usage">usage: /slowmode [seconds] [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/role</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">add or remove a role from a user</p>
+                            <div class="cmd-usage">usage: /role @user @role</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/nick</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">change or reset a users nickname</p>
+                            <div class="cmd-usage">usage: /nick @user [nickname]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
                                 <span class="cmd-name">/softban</span>
                                 <span class="cmd-badge admin">admin</span>
                             </div>
@@ -149,6 +215,30 @@
                             </div>
                             <p class="cmd-desc">ban multiple users at once</p>
                             <div class="cmd-usage">usage: /massban [user_ids] [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/masskick</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">kick multiple members at once</p>
+                            <div class="cmd-usage">usage: /masskick @user1 @user2... [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/lockall</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">lock all channels in the server</p>
+                            <div class="cmd-usage">usage: /lockall</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/unlockall</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">unlock all channels in the server</p>
+                            <div class="cmd-usage">usage: /unlockall</div>
                         </div>
                     </div>
                 </div>
@@ -172,6 +262,13 @@
                             </div>
                             <p class="cmd-desc">view the last edited message</p>
                             <div class="cmd-usage">usage: /editsnipe</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/reactionsnipe</span>
+                            </div>
+                            <p class="cmd-desc">view the last removed reaction</p>
+                            <div class="cmd-usage">usage: /reactionsnipe</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
@@ -210,17 +307,38 @@
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
+                                <span class="cmd-name">/roleinfo</span>
+                            </div>
+                            <p class="cmd-desc">view detailed role information</p>
+                            <div class="cmd-usage">usage: /roleinfo @role</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/channelinfo</span>
+                            </div>
+                            <p class="cmd-desc">view detailed channel information</p>
+                            <div class="cmd-usage">usage: /channelinfo [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/firstmsg</span>
+                            </div>
+                            <p class="cmd-desc">get a link to the first message in a channel</p>
+                            <div class="cmd-usage">usage: /firstmsg [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
                                 <span class="cmd-name">/poll</span>
                             </div>
                             <p class="cmd-desc">create a poll with reactions</p>
-                            <div class="cmd-usage">usage: /poll [question] [options]</div>
+                            <div class="cmd-usage">usage: /poll [question] [option1,option2...]</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
                                 <span class="cmd-name">/remind</span>
                             </div>
                             <p class="cmd-desc">set a reminder</p>
-                            <div class="cmd-usage">usage: /remind [time] [reminder]</div>
+                            <div class="cmd-usage">usage: /remind [10m/2h/1d] [reminder]</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
@@ -229,6 +347,76 @@
                             </div>
                             <p class="cmd-desc">steal an emoji from another server</p>
                             <div class="cmd-usage">usage: /steal [emoji] [name]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/enlarge</span>
+                            </div>
+                            <p class="cmd-desc">enlarge a custom emoji</p>
+                            <div class="cmd-usage">usage: /enlarge [emoji]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/membercount</span>
+                            </div>
+                            <p class="cmd-desc">view server member count</p>
+                            <div class="cmd-usage">usage: /membercount</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/emojis</span>
+                            </div>
+                            <p class="cmd-desc">list all custom emojis in the server</p>
+                            <div class="cmd-usage">usage: /emojis</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/roles</span>
+                            </div>
+                            <p class="cmd-desc">list all roles in the server</p>
+                            <div class="cmd-usage">usage: /roles</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/bots</span>
+                            </div>
+                            <p class="cmd-desc">list all bots in the server</p>
+                            <div class="cmd-usage">usage: /bots</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/inrole</span>
+                            </div>
+                            <p class="cmd-desc">list members with a specific role</p>
+                            <div class="cmd-usage">usage: /inrole @role</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/boosters</span>
+                            </div>
+                            <p class="cmd-desc">list all server boosters</p>
+                            <div class="cmd-usage">usage: /boosters</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/ping</span>
+                            </div>
+                            <p class="cmd-desc">check bot latency</p>
+                            <div class="cmd-usage">usage: /ping</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/uptime</span>
+                            </div>
+                            <p class="cmd-desc">check how long bot has been online</p>
+                            <div class="cmd-usage">usage: /uptime</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/qr</span>
+                            </div>
+                            <p class="cmd-desc">generate a qr code</p>
+                            <div class="cmd-usage">usage: /qr [text]</div>
                         </div>
                     </div>
                 </div>
@@ -273,6 +461,41 @@
                             </div>
                             <p class="cmd-desc">calculate ship compatibility between two users</p>
                             <div class="cmd-usage">usage: /ship @user1 @user2</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/hug</span>
+                            </div>
+                            <p class="cmd-desc">hug someone</p>
+                            <div class="cmd-usage">usage: /hug @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/kiss</span>
+                            </div>
+                            <p class="cmd-desc">kiss someone</p>
+                            <div class="cmd-usage">usage: /kiss @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/slap</span>
+                            </div>
+                            <p class="cmd-desc">slap someone</p>
+                            <div class="cmd-usage">usage: /slap @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/pat</span>
+                            </div>
+                            <p class="cmd-desc">pat someone</p>
+                            <div class="cmd-usage">usage: /pat @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/bite</span>
+                            </div>
+                            <p class="cmd-desc">bite someone</p>
+                            <div class="cmd-usage">usage: /bite @user</div>
                         </div>
                     </div>
                 </div>
@@ -320,6 +543,20 @@
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
+                                <span class="cmd-name">/slots</span>
+                            </div>
+                            <p class="cmd-desc">play slots machine</p>
+                            <div class="cmd-usage">usage: /slots [bet]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/daily</span>
+                            </div>
+                            <p class="cmd-desc">claim your daily reward</p>
+                            <div class="cmd-usage">usage: /daily</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
                                 <span class="cmd-name">/pay</span>
                             </div>
                             <p class="cmd-desc">pay someone money</p>
@@ -330,14 +567,14 @@
                                 <span class="cmd-name">/deposit</span>
                             </div>
                             <p class="cmd-desc">deposit money to your bank</p>
-                            <div class="cmd-usage">usage: /deposit [amount]</div>
+                            <div class="cmd-usage">usage: /deposit [amount|all]</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
                                 <span class="cmd-name">/withdraw</span>
                             </div>
                             <p class="cmd-desc">withdraw money from your bank</p>
-                            <div class="cmd-usage">usage: /withdraw [amount]</div>
+                            <div class="cmd-usage">usage: /withdraw [amount|all]</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
@@ -381,7 +618,7 @@
                                 <span class="cmd-name">/rps</span>
                             </div>
                             <p class="cmd-desc">play rock paper scissors with the bot</p>
-                            <div class="cmd-usage">usage: /rps [choice]</div>
+                            <div class="cmd-usage">usage: /rps [rock|paper|scissors]</div>
                         </div>
                         <div class="command-card">
                             <div class="cmd-header">
@@ -396,6 +633,238 @@
                             </div>
                             <p class="cmd-desc">get a random meme</p>
                             <div class="cmd-usage">usage: /meme</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/hack</span>
+                            </div>
+                            <p class="cmd-desc">fake hack someone (joke command)</p>
+                            <div class="cmd-usage">usage: /hack @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/rate</span>
+                            </div>
+                            <p class="cmd-desc">rate something out of 10</p>
+                            <div class="cmd-usage">usage: /rate [thing]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/choose</span>
+                            </div>
+                            <p class="cmd-desc">choose between multiple options</p>
+                            <div class="cmd-usage">usage: /choose [option1,option2,...]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/gay</span>
+                            </div>
+                            <p class="cmd-desc">calculate gay percentage</p>
+                            <div class="cmd-usage">usage: /gay [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/simprate</span>
+                            </div>
+                            <p class="cmd-desc">calculate simp percentage</p>
+                            <div class="cmd-usage">usage: /simprate [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/iq</span>
+                            </div>
+                            <p class="cmd-desc">check someones iq</p>
+                            <div class="cmd-usage">usage: /iq [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/roast</span>
+                            </div>
+                            <p class="cmd-desc">roast someone</p>
+                            <div class="cmd-usage">usage: /roast [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/compliment</span>
+                            </div>
+                            <p class="cmd-desc">compliment someone</p>
+                            <div class="cmd-usage">usage: /compliment [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/cat</span>
+                            </div>
+                            <p class="cmd-desc">get a random cat image</p>
+                            <div class="cmd-usage">usage: /cat</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/dog</span>
+                            </div>
+                            <p class="cmd-desc">get a random dog image</p>
+                            <div class="cmd-usage">usage: /dog</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/neko</span>
+                            </div>
+                            <p class="cmd-desc">get a random neko image</p>
+                            <div class="cmd-usage">usage: /neko</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/fact</span>
+                            </div>
+                            <p class="cmd-desc">get a random fact</p>
+                            <div class="cmd-usage">usage: /fact</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/joke</span>
+                            </div>
+                            <p class="cmd-desc">get a random joke</p>
+                            <div class="cmd-usage">usage: /joke</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="music">
+                    <h2 class="category-title">
+                        <span class="category-icon">🎵</span>
+                        music
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/play</span>
+                            </div>
+                            <p class="cmd-desc">play a song from youtube or other sources</p>
+                            <div class="cmd-usage">usage: /play [url]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/skip</span>
+                            </div>
+                            <p class="cmd-desc">skip the current song</p>
+                            <div class="cmd-usage">usage: /skip</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/stop</span>
+                            </div>
+                            <p class="cmd-desc">stop music and disconnect bot</p>
+                            <div class="cmd-usage">usage: /stop</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/pause</span>
+                            </div>
+                            <p class="cmd-desc">pause the current song</p>
+                            <div class="cmd-usage">usage: /pause</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/resume</span>
+                            </div>
+                            <p class="cmd-desc">resume the paused song</p>
+                            <div class="cmd-usage">usage: /resume</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/queue</span>
+                            </div>
+                            <p class="cmd-desc">view the music queue</p>
+                            <div class="cmd-usage">usage: /queue</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/nowplaying</span>
+                            </div>
+                            <p class="cmd-desc">view the currently playing song</p>
+                            <div class="cmd-usage">usage: /nowplaying</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/clearqueue</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">clear the entire music queue</p>
+                            <div class="cmd-usage">usage: /clearqueue</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/volume</span>
+                            </div>
+                            <p class="cmd-desc">change the music volume</p>
+                            <div class="cmd-usage">usage: /volume [0-100]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/shuffle</span>
+                            </div>
+                            <p class="cmd-desc">shuffle the music queue</p>
+                            <div class="cmd-usage">usage: /shuffle</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/loop</span>
+                            </div>
+                            <p class="cmd-desc">loop the current song</p>
+                            <div class="cmd-usage">usage: /loop</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/remove</span>
+                            </div>
+                            <p class="cmd-desc">remove a song from queue by position</p>
+                            <div class="cmd-usage">usage: /remove [position]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="custom">
+                    <h2 class="category-title">
+                        <span class="category-icon">⚡</span>
+                        custom commands
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/addcommand</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">create a custom command for your server</p>
+                            <div class="cmd-usage">usage: /addcommand [name] [response]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/delcommand</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">delete a custom command</p>
+                            <div class="cmd-usage">usage: /delcommand [name]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/editcommand</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">edit an existing custom command</p>
+                            <div class="cmd-usage">usage: /editcommand [name] [new response]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/customcommands</span>
+                            </div>
+                            <p class="cmd-desc">list all custom commands in the server</p>
+                            <div class="cmd-usage">usage: /customcommands</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">variables</span>
+                            </div>
+                            <p class="cmd-desc">use {user}, {server}, {members} in custom command responses</p>
+                            <div class="cmd-usage">example: "welcome {user} to {server}!"</div>
                         </div>
                     </div>
                 </div>
@@ -490,7 +959,7 @@
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>cleave.lol © 2024 • not affiliated with discord</p>
+                <p>cleave.lol © 2025 • not affiliated with discord • made by yves (@hatedyves)</p>
             </div>
         </div>
     </footer>
