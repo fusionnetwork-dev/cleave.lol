@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>commands - cleave</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="logo">cleave</div>
+        <ul class="nav-links">
+            <li><a href="index.html">home</a></li>
+            <li><a href="commands.html" class="active">commands</a></li>
+            <li><a href="status.html">status</a></li>
+            <li><a href="docs.html">docs</a></li>
+            <li><a href="faq.html">faq</a></li>
+            <li><a href="https://discord.com/oauth2/authorize?client_id=1441681059002712155&permissions=8&integration_type=0&scope=bot%20applications.commands" class="invite-btn">invite</a></li>
+        </ul>
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </nav>
+
+    <div class="page-header">
+        <div class="container">
+            <h1>commands</h1>
+            <p>all commands cleave has to offer</p>
+        </div>
+    </div>
+
+    <div class="commands-page">
+        <div class="container">
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="search commands...">
+            </div>
+
+            <div class="category-tabs">
+                <button class="tab-btn active" data-category="all">all</button>
+                <button class="tab-btn" data-category="moderation">moderation</button>
+                <button class="tab-btn" data-category="utility">utility</button>
+                <button class="tab-btn" data-category="social">social</button>
+                <button class="tab-btn" data-category="economy">economy</button>
+                <button class="tab-btn" data-category="fun">fun</button>
+                <button class="tab-btn" data-category="config">config</button>
+            </div>
+
+            <div class="commands-container">
+                <div class="command-category" data-category="moderation">
+                    <h2 class="category-title">
+                        <span class="category-icon">🔨</span>
+                        moderation
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/ban</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">ban a member from the server</p>
+                            <div class="cmd-usage">usage: /ban @user [reason] [days]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/unban</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">unban a user from the server</p>
+                            <div class="cmd-usage">usage: /unban [user_id] [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/kick</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">kick a member from the server</p>
+                            <div class="cmd-usage">usage: /kick @user [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/timeout</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">timeout a member (mute them temporarily)</p>
+                            <div class="cmd-usage">usage: /timeout @user [duration] [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/warn</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">warn a member for breaking rules</p>
+                            <div class="cmd-usage">usage: /warn @user [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/purge</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">bulk delete messages in a channel</p>
+                            <div class="cmd-usage">usage: /purge [amount] [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/nuke</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">clone and delete a channel (clears all messages)</p>
+                            <div class="cmd-usage">usage: /nuke</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/lock</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">lock a channel so users cant send messages</p>
+                            <div class="cmd-usage">usage: /lock [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/unlock</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">unlock a previously locked channel</p>
+                            <div class="cmd-usage">usage: /unlock [#channel]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/softban</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">ban and immediately unban to clear messages</p>
+                            <div class="cmd-usage">usage: /softban @user [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/hackban</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">ban a user not in the server</p>
+                            <div class="cmd-usage">usage: /hackban [user_id] [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/massban</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">ban multiple users at once</p>
+                            <div class="cmd-usage">usage: /massban [user_ids] [reason]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="utility">
+                    <h2 class="category-title">
+                        <span class="category-icon">🔧</span>
+                        utility
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/snipe</span>
+                            </div>
+                            <p class="cmd-desc">view the last deleted message in a channel</p>
+                            <div class="cmd-usage">usage: /snipe</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/editsnipe</span>
+                            </div>
+                            <p class="cmd-desc">view the last edited message</p>
+                            <div class="cmd-usage">usage: /editsnipe</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/afk</span>
+                            </div>
+                            <p class="cmd-desc">set your afk status</p>
+                            <div class="cmd-usage">usage: /afk [reason]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/avatar</span>
+                            </div>
+                            <p class="cmd-desc">view someones avatar in full size</p>
+                            <div class="cmd-usage">usage: /avatar [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/banner</span>
+                            </div>
+                            <p class="cmd-desc">view someones banner</p>
+                            <div class="cmd-usage">usage: /banner [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/serverinfo</span>
+                            </div>
+                            <p class="cmd-desc">view detailed server information</p>
+                            <div class="cmd-usage">usage: /serverinfo</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/userinfo</span>
+                            </div>
+                            <p class="cmd-desc">view detailed user information</p>
+                            <div class="cmd-usage">usage: /userinfo [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/poll</span>
+                            </div>
+                            <p class="cmd-desc">create a poll with reactions</p>
+                            <div class="cmd-usage">usage: /poll [question] [options]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/remind</span>
+                            </div>
+                            <p class="cmd-desc">set a reminder</p>
+                            <div class="cmd-usage">usage: /remind [time] [reminder]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/steal</span>
+                                <span class="cmd-badge mod">mod</span>
+                            </div>
+                            <p class="cmd-desc">steal an emoji from another server</p>
+                            <div class="cmd-usage">usage: /steal [emoji] [name]</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="social">
+                    <h2 class="category-title">
+                        <span class="category-icon">💬</span>
+                        social
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/vouch</span>
+                            </div>
+                            <p class="cmd-desc">vouch for someone to increase their rep</p>
+                            <div class="cmd-usage">usage: /vouch @user [comment]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/rep</span>
+                            </div>
+                            <p class="cmd-desc">check someones reputation</p>
+                            <div class="cmd-usage">usage: /rep [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/marry</span>
+                            </div>
+                            <p class="cmd-desc">marry someone in the server</p>
+                            <div class="cmd-usage">usage: /marry @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/divorce</span>
+                            </div>
+                            <p class="cmd-desc">divorce your partner</p>
+                            <div class="cmd-usage">usage: /divorce</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/ship</span>
+                            </div>
+                            <p class="cmd-desc">calculate ship compatibility between two users</p>
+                            <div class="cmd-usage">usage: /ship @user1 @user2</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="economy">
+                    <h2 class="category-title">
+                        <span class="category-icon">💰</span>
+                        economy
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/balance</span>
+                            </div>
+                            <p class="cmd-desc">check your or someones balance</p>
+                            <div class="cmd-usage">usage: /balance [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/work</span>
+                            </div>
+                            <p class="cmd-desc">work to earn money</p>
+                            <div class="cmd-usage">usage: /work</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/crime</span>
+                            </div>
+                            <p class="cmd-desc">commit a crime for big money (risky)</p>
+                            <div class="cmd-usage">usage: /crime</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/rob</span>
+                            </div>
+                            <p class="cmd-desc">rob another user</p>
+                            <div class="cmd-usage">usage: /rob @user</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/gamble</span>
+                            </div>
+                            <p class="cmd-desc">gamble your money for a chance to double it</p>
+                            <div class="cmd-usage">usage: /gamble [amount]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/pay</span>
+                            </div>
+                            <p class="cmd-desc">pay someone money</p>
+                            <div class="cmd-usage">usage: /pay @user [amount]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/deposit</span>
+                            </div>
+                            <p class="cmd-desc">deposit money to your bank</p>
+                            <div class="cmd-usage">usage: /deposit [amount]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/withdraw</span>
+                            </div>
+                            <p class="cmd-desc">withdraw money from your bank</p>
+                            <div class="cmd-usage">usage: /withdraw [amount]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/leaderboard</span>
+                            </div>
+                            <p class="cmd-desc">view the richest users in the server</p>
+                            <div class="cmd-usage">usage: /leaderboard</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="fun">
+                    <h2 class="category-title">
+                        <span class="category-icon">🎮</span>
+                        fun
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/8ball</span>
+                            </div>
+                            <p class="cmd-desc">ask the magic 8ball a question</p>
+                            <div class="cmd-usage">usage: /8ball [question]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/coinflip</span>
+                            </div>
+                            <p class="cmd-desc">flip a coin</p>
+                            <div class="cmd-usage">usage: /coinflip</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/dice</span>
+                            </div>
+                            <p class="cmd-desc">roll a dice</p>
+                            <div class="cmd-usage">usage: /dice [sides]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/rps</span>
+                            </div>
+                            <p class="cmd-desc">play rock paper scissors with the bot</p>
+                            <div class="cmd-usage">usage: /rps [choice]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/pp</span>
+                            </div>
+                            <p class="cmd-desc">check pp size (joke command)</p>
+                            <div class="cmd-usage">usage: /pp [@user]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/meme</span>
+                            </div>
+                            <p class="cmd-desc">get a random meme</p>
+                            <div class="cmd-usage">usage: /meme</div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="command-category" data-category="config">
+                    <h2 class="category-title">
+                        <span class="category-icon">⚙️</span>
+                        config
+                    </h2>
+                    <div class="commands-list">
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/setlog</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">set the moderation log channel</p>
+                            <div class="cmd-usage">usage: /setlog #channel</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/setwelcome</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">set the welcome message channel</p>
+                            <div class="cmd-usage">usage: /setwelcome #channel</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/setautorole</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">set role to give new members</p>
+                            <div class="cmd-usage">usage: /setautorole @role</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/setboost</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">set boost announcement channel</p>
+                            <div class="cmd-usage">usage: /setboost #channel</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/setstarboard</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">setup starboard system</p>
+                            <div class="cmd-usage">usage: /setstarboard #channel [count]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/autoreact</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">setup automatic reactions in a channel</p>
+                            <div class="cmd-usage">usage: /autoreact #channel [emoji]</div>
+                        </div>
+                        <div class="command-card">
+                            <div class="cmd-header">
+                                <span class="cmd-name">/counting</span>
+                                <span class="cmd-badge admin">admin</span>
+                            </div>
+                            <p class="cmd-desc">setup counting channel</p>
+                            <div class="cmd-usage">usage: /counting #channel</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-col">
+                    <h4>cleave</h4>
+                    <p>the discord bot that goes crazy</p>
+                </div>
+                <div class="footer-col">
+                    <h4>links</h4>
+                    <a href="commands.html">commands</a>
+                    <a href="status.html">status</a>
+                    <a href="docs.html">docs</a>
+                    <a href="faq.html">faq</a>
+                </div>
+                <div class="footer-col">
+                    <h4>support</h4>
+                    <a href="#">discord server</a>
+                    <a href="#">twitter</a>
+                    <a href="#">github</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>cleave.lol © 2024 • not affiliated with discord</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="commands.js"></script>
+</body>
+</html>
