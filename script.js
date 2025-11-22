@@ -25,7 +25,7 @@ function animateCounter(element) {
     const duration = 2000;
     const step = target / (duration / 16);
     let current = 0;
-    
+
     const updateCounter = () => {
         current += step;
         if (current < target) {
@@ -38,7 +38,7 @@ function animateCounter(element) {
             }
         }
     };
-    
+
     updateCounter();
 }
 
@@ -81,10 +81,20 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     });
 });
 
-// Active page highlight
-const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+// Active page highlight WITHOUT .html
+let currentPage = window.location.pathname.split('/').pop();
+
+// Empty path = index
+if (!currentPage || currentPage === "/") {
+    currentPage = "index";
+} else {
+    currentPage = currentPage.replace(".html", "");
+}
+
 document.querySelectorAll('.nav-links a').forEach(link => {
-    if (link.getAttribute('href') === currentPage) {
+    const linkPage = link.getAttribute('href').replace(".html", "");
+
+    if (linkPage === currentPage) {
         link.classList.add('active');
     }
 });
